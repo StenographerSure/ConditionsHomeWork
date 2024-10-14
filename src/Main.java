@@ -100,19 +100,15 @@ public class Main {
         int two = 2;
         int three = 3;
 
-        if(one > two){
-            if(one > three){
-                System.out.println("Biggest number - " + one);
-            }
-            else {
-                System.out.println("Biggest number - " + three);
-            }
+        if (one > two && one >three){
+            System.out.println("Biggest number - " + one);
         }
-        else if (two > three){
+        else if (two > one && two > three) {
             System.out.println("Biggest number - " + two);
         }
         else {
             System.out.println("Biggest number - " + three);
         }
+
     }
 }
