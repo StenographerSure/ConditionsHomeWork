@@ -75,7 +75,7 @@ public class Main {
 
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
 
-        char temp;
+        char temp = ' ';
 
         for (int i = 0; i < reverseFullName.length/2; i++){
             temp = reverseFullName[i];
