@@ -5,83 +5,87 @@ public class Main {
         //задача 1
         System.out.println("Задача 1");
 
-        int[] array = new int[3];
-        array[0] = 1;
-        array[1] = 2;
-        array[2] = 3;
+        int[] book = new int[5];
 
-        double[] d_array = {1.57, 7.654, 9.986};
+        for (int i = 0; i< 5; i++)
+        {
+           book[i] = i+1;
+        }
 
-        int[] voluntary = {173, 86, 1984, 40_000};
+        int sum = 0;
+
+        for (int i : book)
+        {
+            sum += i;
+        }
+
+        System.out.printf("Сумма трат за месяц составила %d рублей\n", sum);
 
         //задача 2
         System.out.println("Задача 2");
 
-        for (int i = 0; i < array.length; i++){
-            System.out.print(array[i]);
-            if (i<array.length - 1){
-                System.out.print(", ");
-            }
+        int[] book_2 = new int[5];
+
+        for (int i = 0; i< 5; i++)
+        {
+            book_2[i] = i+1;
         }
 
-        System.out.println();
+        int min = book_2[0];
+        int max = book_2[0];
 
-        for (int i = 0; i < d_array.length; i++){
-            System.out.print(d_array[i]);
-            if (i<d_array.length - 1){
-                System.out.print(", ");
+        for (int i = 0; i< 5; i++)
+        {
+            if(min > book_2[i]){
+                min = book_2[i];
             }
         }
+        System.out.printf("Минимальная трата рублей за неделю составила %d рублей\n", min);
 
-        System.out.println();
-
-        for (int i = 0; i < voluntary.length; i++){
-            System.out.print(voluntary[i]);
-            if (i<voluntary.length - 1){
-                System.out.print(", ");
+        for (int i = 0; i< 5; i++)
+        {
+            if(max < book_2[i]){
+                max = book_2[i];
             }
         }
-
-        System.out.println();
+        System.out.printf("Максимальная трата рублей за неделю составила %d рублей\n", max);
 
         //задача 3
         System.out.println("Задача 3");
 
-        for (int i = array.length - 1 ; i >= 0 ; i--){
-            System.out.print(array[i]);
-            if (i> 0){
-                System.out.print(", ");
-            }
+        int[] book_3 = new int[5];
+
+        for (int i = 0; i< 5; i++)
+        {
+            book_3[i] = i+1;
         }
 
-        System.out.println();
+        sum = 0;
 
-        for (int i = d_array.length - 1 ; i >= 0 ; i--){
-            System.out.print(d_array[i]);
-            if (i> 0){
-                System.out.print(", ");
-            }
+        for (int i : book_3)
+        {
+            sum += i;
         }
+        double average = (sum/book_3.length);
 
-        System.out.println();
-
-        for (int i = voluntary.length - 1 ; i >= 0 ; i--){
-            System.out.print(voluntary[i]);
-            if (i> 0){
-                System.out.print(", ");
-            }
-        }
-
-        System.out.println();
+        System.out.printf("Средняя сумма трат за месяц составила %.1f рублей\n", average);
 
         //задача 4
         System.out.println("Задача 4");
 
-        for (int i = 0; i < array.length; i++){
-            if (array[i]%2 != 0){
-                array[i]++;
-            }
+        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+
+        char temp;
+
+        for (int i = 0; i < reverseFullName.length/2; i++){
+            temp = reverseFullName[i];
+            reverseFullName[i] = reverseFullName[(reverseFullName.length-1)-i];
+            reverseFullName[(reverseFullName.length-1)-i] = temp;
         }
-        System.out.println(Arrays.toString(array));
+
+        for(char symbol: reverseFullName){
+            System.out.print(symbol);
+        }
+
     }
 }
