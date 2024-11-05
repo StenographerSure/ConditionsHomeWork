@@ -68,7 +68,7 @@ public class Main {
         }
         double average = (sum/book_3.length);
 
-        System.out.printf("Средняя сумма трат за месяц составила %.1f рублей\n", average);
+        System.out.printf("Средняя сумма трат за месяц составила %f рублей\n", average);
 
         //задача 4
         System.out.println("Задача 4");
@@ -77,15 +77,11 @@ public class Main {
 
         char temp = ' ';
 
-        for (int i = 0; i < reverseFullName.length/2; i++){
-            temp = reverseFullName[i];
-            reverseFullName[i] = reverseFullName[(reverseFullName.length-1)-i];
-            reverseFullName[(reverseFullName.length-1)-i] = temp;
+        for (int i = reverseFullName.length -1 ; i >= 0; i--){
+            System.out.print(reverseFullName[i]);
         }
 
-        for(char symbol: reverseFullName){
-            System.out.print(symbol);
-        }
+
 
     }
 }
