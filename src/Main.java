@@ -20,13 +20,13 @@ public class Main {
     }
 
     public static void checkLeapYear(int year) {
-         if ( year%4 == 0 && (year%100 != 0 || year%400 == 0) && year > 1584 ){
+        if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0) && year > 1584) {
             System.out.println(year + " год — високосный год");
-        }
-        else {
+        } else {
             System.out.println(year + " год — невисокосный год");
         }
     }
+
     public static void checkCompatibility(int clientOS, int clientDeviceYear) {
         if (clientDeviceYear >= LocalDate.now().getYear()) {
             if (clientOS == 0) {
@@ -41,18 +41,15 @@ public class Main {
         }
     }
 
-    public static void estimateDeliveryTime(int deliveryDistance){
+    public static void estimateDeliveryTime(int deliveryDistance) {
 
-        if (deliveryDistance <= 20 ){
+        if (deliveryDistance <= 20) {
             System.out.println("Потребуется дней: " + 1);
-        }
-        else if (deliveryDistance > 20 && deliveryDistance <= 60) {
+        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
             System.out.println("Потребуется дней: " + 2);
-        }
-        else if (deliveryDistance > 60 && deliveryDistance <=100) {
+        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
             System.out.println("Потребуется дней: " + 3);
-        }
-        else {
+        } else {
             System.out.println("Доставки нет");
         }
     }
