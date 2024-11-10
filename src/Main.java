@@ -10,7 +10,7 @@ public class Main {
         //задача 2
         System.out.println("Задача 2");
 
-        checkCompatibility(1, 2023);
+        checkCompatibility(3, 2023);
 
         //задача 3
         System.out.println("Задача 3");
@@ -27,17 +27,34 @@ public class Main {
     }
 
     public static void checkCompatibility(int clientOS, int clientDeviceYear) {
+
         if (clientDeviceYear >= LocalDate.now().getYear()) {
-            if (clientOS == 0) {
-                System.out.println("Установите версию приложения для iOS по ссылке");
-            } else {
-                System.out.println("Установите версию приложения для Android по ссылке");
+            switch (clientOS){
+                case 0:
+                    System.out.println("Установите версию приложения для iOS по ссылке");
+                    break;
+                case 1:
+                    System.out.println("Установите версию приложения для Android по ссылке");
+                    break;
+                default:
+                    System.out.println("Некорректный код OS");
+                    break;
+
             }
-        } else if (clientOS == 0) {
-            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        } else {
-            System.out.println("Установите облегченную версию приложения для Android по ссылке");
-        }
+        } else
+            switch (clientOS){
+                case 0:
+                    System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+                    break;
+                case 1:
+                    System.out.println("Установите облегченную версию приложения для Android по ссылке");
+                    break;
+               default:
+                   System.out.println("Некорректный код OS");
+                   break;
+
+            }
+
     }
 
     public static void estimateDeliveryTime(int deliveryDistance) {
